@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<style>
+    body {
+  background-image:linear-gradient(rgba(184, 18, 235, 0.2), rgba(184, 18, 235, 0.2)),url(home.png.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    .form{
+    position: absolute;
+    z-index: 1;
+    background-color:   rgb(174, 209, 76);
+    width: 400px;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+    top: 17%;
+    left: 36%;
+}
+.form input{
+    font-family:"Roboto" sans-serif;
+    outline: 1;
+    background:  rgb(143, 143, 245);
+    width: 100%;
+    border: 0;
+    margin: 0 0 1px;
+    padding: 15px;
+    box-sizing: content-box;
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+.form button{
+    font-family:"Roboto" sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    outline-color: maroon;
+    background: forestgreen;
+    width: 100%;
+    border: darkseagreen;
+    padding: 15px;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form button:hover, .form button:active{
+    background: #43A047;
+}
+.Update{
+  font-size: 38px;
+  top: 10%;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  left: 50%;
+}
+</style>
+<h1 class="Update" >Update Company's Background Details</h2>
+<body>
+<form action="SSupdate1.php" method="post">
+    <div class="form">
+        <form class="Login-portal">
+    <p>
+        <label for="name">Company Name:</label>
+        <input type="text" name="name" id="name"  required>
+    </p>
+    <p>
+        <label for="origin">Origin :</label>
+        <input type="text" name="origin" id="origin"  required>
+    </p>
+    <p>
+        <label for="sector">Sector :</label>
+        <input type="text" name="sector" id="sector"  required>
+    </p>
+    <p>
+        <label for="Deliverable_qty">Deliverable Quantity :</label>
+        <input type="number" name="Deliverable_qty" id="Deliverable_qty" required>
+    </p>
+    <p>
+        <label for="Turnover">Turn Over :</label>
+        <input type="number" name="Turnover" id="Turnover"  required>
+    </p>
+    <p>
+        <label for="Market_Capital">Market Capital :</label>
+        <input type="number" name="Market_Capital" id="Market_Capital"  required>
+    </p>
+
+    
+    <input type="submit" value="Submit">
+    <a href="SSadmin.html"><h3>BACK</h3></a>
+</form>
+</div>
+    
+    
+    
+</form>
+</body>
+</html>

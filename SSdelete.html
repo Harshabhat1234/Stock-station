@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<style>
+    body {
+  background-image:linear-gradient(rgba(184, 18, 235, 0.2), rgba(184, 18, 235, 0.2)),url(home.png.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    .form{
+    position: absolute;
+    z-index: 1;
+    background-color:  rgb(115, 208, 255);
+    width: 400px;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+    top: 25%;
+    left: 36%;
+}
+.form input{
+    font-family:"Roboto" sans-serif;
+    outline: 1;
+    background: rgb(138, 138, 235);
+    width: 100%;
+    border: 0;
+    margin: 0 0 1px;
+    padding: 15px;
+    box-sizing: content-box;
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+.form button{
+    font-family:"Roboto" sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    outline-color: maroon;
+    background: forestgreen;
+    width: 100%;
+    border: darkseagreen;
+    padding: 15px;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form button:hover, .form button:active{
+    background: #43A047;
+}
+.Update{
+  font-size: 38px;
+  top: 10%;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  left: 50%;
+  padding: 40px;
+}
+</style>
+<h1> <center>  <marquee>STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION!</marquee></center> </h1>
+<h1 class="Update" > Delete a Company </h2>
+<body>
+<form action="SSdelete.php" method="post">
+    <div class="form">
+        <form class="Login-portal">
+    <p>
+        <label for="name"><h3>Company Name:</h3></label>
+        <input type="text" name="name" id="name"  required>
+    </p>
+
+    
+ <h2>  <input type="submit" value="Submit"></h2> 
+    <a href="SSadmin.html"><h3>BACK</h3></a>
+</form>
+</div>
+    
+    
+    
+</form>
+</body>
+</html>

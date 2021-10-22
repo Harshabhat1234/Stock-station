@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<style>
+    body {
+  background-image:linear-gradient(rgba(184, 18, 235, 0.2), rgba(184, 18, 235, 0.2)),url(home.png.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    .form{
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(174, 209, 76);
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    top: 13%;
+    left: 36%;
+}
+.form input{
+    font-family:"Roboto" sans-serif;
+    outline: 1;
+    background:  rgb(143, 143, 245);
+    width: 100%;
+    border: 0;
+    margin: 0 0 0px;
+    padding: 8px;
+    box-sizing: content-box;
+    font-size: 13px;
+    font-weight: bolder;
+
+}
+.form button{
+    font-family:"Roboto" sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    outline-color: maroon;
+    background: forestgreen;
+    width: 100%;
+    border: darkseagreen;
+    padding: 15px;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form button:hover, .form button:active{
+    background: #43A047;
+}
+.Update{
+  font-size: 38px;
+  top: 10%;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  left: 50%;
+}
+</style>
+<h1 class="Update" >Update Company's Trades Details</h2>
+<body>
+<form action="SSupdate2.php" method="post">
+    <div class="form">
+        <form class="Login-portal">
+    <p>
+        <label for="symbol">CompanySymbol:</label>
+        <input type="text" name="symbol" id="symbol"  required>
+    </p>
+    <p>
+        <label for="no_of_trades">Number of trades:</label>
+        <input type="text" name="no_of_trades" id="no_of_trades"  required>
+    </p>
+    
+    <p>
+        <label for="shareprice">Share Price :</label>
+        <input type="number" name="shareprice" id="shareprice"  required>
+    </p>
+    <p>
+        <label for="OP">Open price :</label>
+        <input type="number" name="OP" id="OP"  required>
+    </p>
+    <p>
+        <label for="HP">High Price :</label>
+        <input type="number" name="HP" id="HP"  required>
+    </p>
+    <p>
+        <label for="LP">Low Price :</label>
+        <input type="number" name="LP" id="LP"  required>
+    </p>
+    <p>
+        <label for="CP">Close Price :</label>
+        <input type="number" name="CP" id="CP"  required>
+    </p>
+    <p>
+        <label for="AP">Avg Price :</label>
+        <input type="number" name="AP" id="AP"  required>
+    </p>
+    <p>
+        <label for="PC">Previous Price :</label>
+        <input type="number" name="PC" id="PC"  required>
+    </p>
+
+    
+    <input type="submit" value="Submit">
+    <a href="SSadmin.html"><h3>BACK</h3></a>
+    
+</form>
+</div>
+    
+    
+    
+</form>
+</body>
+</html>

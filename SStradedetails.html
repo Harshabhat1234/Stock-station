@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function GetDetails() {
+  var str =  document.getElementById("STOCKID").value;
+  console.log(str);
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","SStradedetails.php?q="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
+<style>
+body {
+  background-image:linear-gradient(rgba(184, 18, 235, 0.2), rgba(184, 18, 235, 0.2)),url(home.png.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.Search-type{
+  position: absolute;
+  
+  color:white;
+  font-weight: bolder;
+  font-family:"Roboto" sans-serif;
+  box-sizing: content-box;
+  font-size: 25px;
+  top: 65%;
+  left: 15%;
+  width: 23%;
+  transform: translate(-60%,-20%);
+  background:rgb(26, 20, 20);
+  border-radius: 100px;
+  padding: 10px;
+}
+.Search-button{
+  color: white;
+  float:right;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background:#2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:rgb(34, 32, 32) ;
+   color: white;
+   text-align: center;
+   overflow: hidden;
+}
+.foot{
+  display: inline;
+  float: left;
+  margin-left: 70px;
+  margin-right: 50px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.list{
+background-color:rgb(46, 44, 44);
+color: cornsilk;
+text-align: center;
+font-size: 30px;
+left: 50%;
+font-family:"Roboto" sans-serif;
+}
+.Head{
+  left: 30%;
+  font-family:"Roboto" sans-serif;
+  
+}
+.details{
+  background-color: violet;
+  font-size: 30px;
+ left: 45%;
+}
+}
+
+</style>
+</head>
+<body>
+    <h1> <center>  <marquee>STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! STOCK STATION! </marquee></center> </h1>
+
+<!-- <div class="topnav">
+  <a class="active" href="home.html"><h2>Home</h2></a>
+  <a href="about.html"><h2>About</h2></a>
+  <a href="res.html"><h2>Resources</h2></a>
+  <a href="bro.html"><h2>Brokerage sites</h2></a>
+  <a href="login.html"><h2>Admin login</h2></a>
+  <a><h2>DATE: 09/06/2021</h2></a>
+</div> -->
+<div class="background">
+    <h1> Select a company to know its Trade details </h1>
+</div>
+
+
+<div style="padding-left:16px">
+  <tr>
+    <td>
+      <h1 class="Head"> Company Name </h1> 
+    </td>
+    <select class="list" id="STOCKID">
+      <option> Names</option>
+<option>Adani Enterprises Limited</option>
+<option>Adani Green Energy Limited</option>
+<option>Adani Ports and Special Economic Zone Limited</option>
+<option>Adani Transmission Limited</option>
+<option>Asian Paints Limited</option>
+<option>Adani Total Gas Limited</option>
+<option>Axis Bank Limited</option>
+<option>Bajaj Auto Limited</option>
+<option>Bajaj Finserv Limited</option>
+<option>Bajaj Finance Limited</option>
+<option>Bharti Airtel Limited</option>
+<option>Divi's Laboratories Limited</option>
+<option>Avenue Supermarts Limited</option>
+<option>HCL Technologies Limited</option>
+<option>Housing Development Finance Corporation Limited</option>
+<option>HDFC Bank Limited</option>
+<option>HDFC Life Insurance Company Limited</option>
+<option>Hindustan Unilever Limited</option>
+<option>Hindustan Zinc Limited</option>
+<option>ICICI Bank Limited</option>
+<option>Infosys Limited</option>
+<option>ITC Limited</option>
+<option>JSW Steel Limited</option>
+<option>Kotak Mahindra Bank Limited</option>
+<option>Larsen & Toubro Limited</option>
+<option>Mahindra & Mahindra Limited</option>
+<option>Maruti Suzuki India Limited</option>
+<option>NTPC Limited</option>
+<option>Oil & Natural Gas Corporation Limited</option>
+<option>Power Grid Corporation of India Limited</option>
+<option>Reliance Industries Limited</option>
+<option>State Bank of India</option>
+<option>SHREE CEMENT LIMITED</option>
+<option>Sun Pharmaceutical Industries Limited</option>
+<option>Tata Motors Limited</option>
+<option>Tata Consultancy Services Limited</option>
+<option>Tech Mahindra Limited</option>
+<option>Titan Company Limited</option>
+<option>UltraTech Cement Limited</option>
+<option>Wipro Limited</option>
+<option>Yamaha Motors Limited</option>
+
+</select>
+</tr>
+<tr>
+<!--  <td>
+    <h1 class="Head"> Company Symbol </h1> 
+  </td>
+  <select class="list">
+    <option>Symbols</option>
+<option>ADANIENT</option>
+<option>ADANIGREEN</option>
+<option>ADANIPORTS</option>
+<option>ADANITRANS</option>
+<option>ASIANPAINT</option>
+<option>ATGL</option>
+<option>AXISBANK</option>
+<option>BAJAJ-AUTO</option>
+<option>BAJAJFINSV</option>
+<option>BAJFINANCE</option>
+<option>BHARTIARTL</option>
+<option>DIVISLAB</option>
+<option>DMART</option>
+<option>HCLTECH</option>
+<option>HDFC</option>
+<option>HDFCBANK</option>
+<option>HDFCLIFE</option>
+<option>HINDUNILVR</option>
+<option>HINDZINC</option>
+<option>ICICIBANK</option>
+<option>INFY</option>
+<option>ITC</option>
+<option>JSWSTEEL</option>
+<option>KOTAKBANK</option>
+<option>LT</option>
+<option>M&M</option>
+<option>MARUTI</option>
+<option>NTPC</option>
+<option>ONGC</option>
+<option>POWERGRID</option>
+<option>RELIANCE</option>
+<option>SBIN</option>
+<option>SHREECEM</option>
+<option>SUNPHARMA</option>
+<option>TATAMOTORS</option>
+<option>TCS</option>
+<option>TECHM</option>
+<option>TITAN</option>
+<option>ULTRACEMCO</option>
+<option>WIPRO</option>
+  
+
+</div>
+-->
+<!--<div class="Search-box">
+  
+  <!--<input class="Search-type" type="text" name ="" placeholder="Enter company name or Symbol"
+  <a class="Search-button" href="#"></a>
+  <i class="fas fa-search"></i>
+-->
+<br>
+<button class="details" type="button" onclick="GetDetails() ">Get Details</button>
+</br>
+
+  
+  
+
+<div id="txtHint"></div>
+<div class="footer">
+ 
+   <li  class="foot" ><a href="SShome.html"><h2 >Home Page</h2></a></li>
+   <li class="foot"><a href="SSbackground.html"><h2>Company details</h2></a></li>
+   <li class="foot"><a href="SShistory.html"><h2>Trade History</h2></a></li>
+
+ 
+</div>
+
+</body>
+</html>
